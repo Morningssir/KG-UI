@@ -1,0 +1,17 @@
+{
+  "nodes": [
+    {
+      "name": "测试A"
+    },
+    {
+      "name": "测试B"
+    }
+  ],
+  "links": [
+    {
+      "source": 0,
+      "type": "关联",
+      "target": 1
+    }
+  ]
+}

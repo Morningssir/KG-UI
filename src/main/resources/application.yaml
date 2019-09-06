@@ -1,0 +1,14 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /kgraph
+spring:
+  thymeleaf:
+    cache: false
+  mvc:
+    static-path-pattern:  /path/**
+  resources:
+    static-locations:  classpath:/static/
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/patent

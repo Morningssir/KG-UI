@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Knowledge Graph Visual System</title>
+    <link rel="stylesheet" href="http://localhost:8082/kgraph/path/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="http://localhost:8082/kgraph/path/css/graph.css">
+</head>
+<body>
+    <div id="mainbar">
+        <div class="row">
+            <div class="col l3 main-comp">
+                <div id="propbar" class="compbar">
+                    <div id="patent-propbar">
+                        <div class="desp-title center white-text">
+                            <span id="patent-name"></span>
+                        </div>
+                        <div class="desp-line"></div>
+                        <div class="desp-id center white-text">
+                            申请/专利号：<span id="patent-id"></span>
+                        </div>
+                        <div class="desp-date center white-text">
+                            公开/公告日：<span id="patent-date"></span>
+                        </div>
+                        <div class="desp-summary white-text">
+                            <span style="font-weight: bold;">摘要：</span><span id="patent-summary"></span>
+                        </div>
+                        <ul class="desp-dev"></ul>
+                    </div>
+                    <div id="expert-propbar" class="hide">
+                        <div class="desp-title center white-text">
+                            <span id="expert-name"></span>
+                        </div>
+                        <div class="desp-line"></div>
+                        <ul class="desp-dev"></ul>
+                    </div>
+                </div>
+                <div id="stylebar" class="compbar hide">
+                    <div class="style-item">
+                        <div class="style-title">颜色</div>
+                        <ul id="color-pickers" class="pickerbar">
+                            <li class="picker-item">
+                                <div class="picker-item-title">专利</div>
+                                <div class="picker-item-color">
+                                    <input id="patent-color" type="color" name="">
+                                </div>
+                            </li>
+                            <li class="picker-item">
+                                <div class="picker-item-title">专家</div>
+                                <div class="picker-item-color">
+                                    <input id="exp-color" type="color" name="">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="style-item">
+                        <div class="style-title">大小</div>
+                        <ul id="size-pickers" class="pickerbar">
+                            <li class="picker-item">
+                                <div class="picker-item-title">专利</div>
+                                <div class="picker-item-slide">
+                                    <span class="range-field">
+                                        <input type="range" id="patent-size" min="0" max="100" />
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="picker-item">
+                                <div class="picker-item-title">专家</div>
+                                <div class="picker-item-slide">
+                                    <span class="range-field">
+                                        <input type="range" id="exp-size" min="0" max="100" />
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="style-btn right">
+                        <a class="btn">应用</a>
+                    </div>
+                </div>
+                <div id="nlpbar" class="compbar hide">
+                    <div class="dialogbar">
+                        <div class="dialog-part">
+                            <div class="dialog-content right">CN201721502561.7的发明者</div>
+                            <div style="clear: both"></div>
+                        </div>
+                        <div class="dialog-part">
+                            <div class="dialog-content left">谢艳梅，仲崇庆</div>
+                            <div style="clear: both"></div>
+                        </div>
+                        <div class="dialog-part">
+                            <div class="dialog-content right">CN201721725137.9的相关专利</div>
+                            <div style="clear: both"></div>
+                        </div>
+                        <div class="dialog-part">
+                            <div class="dialog-content left">CN201720821857.9</div>
+                            <div style="clear: both"></div>
+                        </div>
+                    </div>
+                    <div class="messagebar">
+                        <div class="message-text">
+                            <input type="text" name="">
+                        </div>
+                        <div class="message-btn">
+                            <a class="btn dialog-btn"><i class="material-icons">send</i></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="selectbar">
+                    <ul class="select-list">
+                        <li id="select-prop" class="select-item selected">属性</li>
+                        <li id="select-style" class="select-item">样式</li>
+                        <li id="select-nlp" class="select-item">机器问答</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col l9 main-comp">
+                <div id="canvas"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="http://localhost:8082/kgraph/path/js/jquery-3.4.1.min.js"></script>
+     <script src="http://localhost:8082/kgraph/path/js/graph.js"></script>
+    <script src="http://localhost:8082/kgraph/path/js/materialize.min.js"></script>
+    <script src="http://localhost:8082/kgraph/path/js/main.js"></script>
+</body>
+</html>
